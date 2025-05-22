@@ -1,0 +1,78 @@
+{
+    
+    "site_server": {
+      "profile_name": "abdullah",
+      "routes_list": "100.11.1.1/11",
+      "multiple_routes":[
+        "1.1.1.1/11, ",
+        "2.2.2.2/12, ",
+        "3.3.3.3/11, ",
+        "4.4.4.4/21, ",
+        "5.5.5.5/22"
+    ],
+      "listening_port": "65535",
+      "list_port": "100.90.11.2/21",
+      "tunnel_local_ip": "10.10.10.10",
+      "tunnel_remote_ip": "20.20.20.20",
+      "tunnel_mtu": "1500",
+      "tx_queue": "1000",
+      "keepalive_timeout": "15", 
+      "socket_send_buffer_size": "990",
+      "socket_receive_buffer_size": "890",
+      "tunnel_timeout": "20"
+    },
+
+    "site_to_site_client": {
+      "profile_name": "abdullah",
+      "routes_list": "100.11.1.1/11",
+      "multiple_routes":[
+        "1.1.1.1/11, ",
+        "2.2.2.2/12, ",
+        "3.3.3.3/11, ",
+        "4.4.4.4/21, ",
+        "5.5.5.5/22"
+    ],
+      "listening_port": "6553",
+      "list_port": "100.90.11.2/21",
+      "remote_server_ip" : "100.100.12.1",
+      "remote_server_port" : "21",
+      "tunnel_local_ip": "10.10.10.10",
+      "tunnel_remote_ip": "20.20.20.20",
+      "tunnel_mtu": "1500",
+      "route_delay": "10",
+      "tx_queue": "1000",
+      "keepalive_timeout": "15", 
+      "socket_send_buffer_size": "990",
+      "socket_receive_buffer_size": "890",
+      "tunnel_timeout": "20"
+    },
+
+    "site_to_multisite_server": {
+      "profile_name": "abdullah",
+      "routes_list": "100.11.1.1/11",
+      "listening_port": "112",
+      "Tunnel_Network_Subnet": "255.255.255.0", 
+      "list_port": "100.90.11.2/21",
+      "tunnel_mtu": "1500",
+     
+      "tx_queue": "1000",
+      "keepalive_timeout": "15",
+      "tunnel_timeout": "20",
+      "syslog" : "190"
+    },
+
+    "site_to_multisite_client": {
+
+      "profile_name": "abdullah",
+      "routes_list": "100.11.1.1/11",
+      "remote_server_ip" : "100.100.12.1",
+      "remote_server_port" : "21", 
+      
+      "tunnel_mtu": "1500", 
+     
+      "tx_queue": "100",
+      "keepalive_timeout": "15"
+      
+    }
+  }
+  

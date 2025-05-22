@@ -1,0 +1,11 @@
+{
+    "bulk_configurations": {
+
+        "profile_name": "abdullah khan",
+        "no_of_clients" : "1",
+        "listening_port": "12",
+        "starting_network_id"  : "100.1.1.21",
+        "tunnel_mtu": "1500"
+      
+    }
+}
