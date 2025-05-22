@@ -76,43 +76,14 @@ class TestLogin(unittest.TestCase):
 
         self.bond.open_connection()
 
-        self.bond.site_to_site_server(
-            site_server_data['profile_name'],
-            site_server_data['routes_list'], 
-            site_server_data['multiple_routes'], 
-            site_server_data['listening_port'], 
-            site_server_data['tunnel_local_ip'], 
-            site_server_data['tunnel_remote_ip'], 
-            site_server_data['tunnel_mtu'], 
-            site_server_data['tx_queue'], 
-            site_server_data['keepalive_timeout'], 
-            site_server_data['socket_send_buffer_size'], 
-            site_server_data['socket_receive_buffer_size'], 
-            site_server_data['tunnel_timeout']
-        )
+        self.bond.site_to_site_server(site_server_data)
                 
         time.sleep(2)
         self.base_page.delete_connection()
 
         time.sleep(2)
 
-        self.bond.site_to_site_client(
-            site_client_data['profile_name'],
-            site_client_data['routes_list'], 
-            site_client_data['remote_server_ip'],
-            site_client_data['remote_server_port'],
-            site_client_data['multiple_routes'], 
-            site_client_data['listening_port'], 
-            site_client_data['tunnel_local_ip'], 
-            site_client_data['tunnel_remote_ip'], 
-            site_client_data['tunnel_mtu'], 
-            site_client_data['route_delay'],
-            site_client_data['tx_queue'], 
-            site_client_data['keepalive_timeout'], 
-            site_client_data['socket_send_buffer_size'], 
-            site_client_data['socket_receive_buffer_size'], 
-            site_client_data['tunnel_timeout']
-        )
+        self.bond.site_to_site_client(site_client_data)
 
         time.sleep(2)
 
@@ -120,29 +91,11 @@ class TestLogin(unittest.TestCase):
 
         time.sleep(2)
 
-        self.bond.site_to_multisite_server(
-            multisite_server['profile_name'],
-            multisite_server['routes_list'],
-            multisite_server['listening_port'],
-            multisite_server['Tunnel_Network_Subnet'],
-            multisite_server['tx_queue'],
-            multisite_server['keepalive_timeout'],
-            multisite_server['tunnel_timeout'],
-            multisite_server['syslog'],
-            multisite_server['tunnel_mtu']
-        )
+        self.bond.site_to_multisite_server(multisite_server)
+        
         time.sleep(2)
 
-        self.bond.site_to_multisite_client(
-
-            multisite_client['profile_name'],
-            multisite_client['routes_list'],
-            multisite_client['remote_server_ip'],
-            multisite_client['remote_server_port'],
-            multisite_client['tunnel_mtu'],
-            multisite_client['tx_queue'],
-            multisite_client['keepalive_timeout']
-        )
+        self.bond.site_to_multisite_client(multisite_client)
 
         # time.sleep(2)
         # self.logs.logs()
